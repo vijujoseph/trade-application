@@ -4,7 +4,8 @@ Application download and setup
 Git clone url : https://github.com/vijujoseph/trade-application.git <br />
 Application use Maven Build, so follow the below steps: <br />
 Maven -> Download sources <br />
-Maven -> clean install (mvn clean install) <br />
+Maven -> clean install (mvn clean install) 
+Locally install and setup rabbit MQ (https://www.rabbitmq.com/)<br />
 
 Trade Application contains two projects as below:
 1. Front-Office-Application: All the incoming trades are initially sent to Front-Office-App. This app transfer the message to rabbit MQ to process it further.
