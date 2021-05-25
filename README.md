@@ -25,9 +25,10 @@ Trade Application contains two projects as below:
       "expired": true
     }
 
-1. Back-Office-Application: This app is a consumer app which will consumes all the trades in trade-queue. The data will be initiated by Front-Office-App. 
+2. Back-Office-Application: This app is a consumer app which will consumes all the trades in trade-queue. The data will be initiated by Front-Office-App. 
 
-2.  GET: http://localhost:8081/trade/orders
+   API Specification is below:
+   GET: http://localhost:8081/trade/orders
    
    ~~~~e.g)
    GET: http://localhost:8081/trade/orders
