@@ -4,7 +4,7 @@ Application download and setup
 Git clone url : https://github.com/vijujoseph/trade-application.git <br />
 Application use Maven Build, so follow the below steps: <br />
 Maven -> Download sources <br />
-Maven -> clean install (mvn clean install) 
+Maven -> clean install (mvn clean install) <br />
 Locally install and setup rabbit MQ (https://www.rabbitmq.com/)<br />
 
 Trade Application contains two projects as below:
