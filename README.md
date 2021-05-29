@@ -5,6 +5,7 @@ Git clone url : https://github.com/vijujoseph/trade-application.git <br />
 Application use Maven Build, so follow the below steps: <br />
 Maven -> Download sources <br />
 Maven -> clean install (mvn clean install) <br />
+Locally install and setup rabbit MQ (https://www.rabbitmq.com/)<br />
 
 Trade Application contains two projects as below:
 1. Front-Office-Application: All the incoming trades are initially sent to Front-Office-App. This app transfer the message to rabbit MQ to process it further.
@@ -66,3 +67,10 @@ Trade Application contains two projects as below:
             "expired":true
          }
       ]
+      
+Note: Exception Scenario: **Dead Letter Queue**
+
+A **Dead Letter Queue (DLQ)** is a queue that holds undelivered/failed messages. A DLQ handles faulty or bad messages, monitor failure patterns and recover from exceptions in a system.
+
+There are 2 main concepts: **Dead Letter Exchange (DLX)** and a **Dead Letter Queue (DLQ)** itself. DLX is a normal exchange that we can define as one of the common types: direct, topic or fanout. I the above project, we use DLQ to handle exception scenario.
+
