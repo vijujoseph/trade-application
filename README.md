@@ -67,3 +67,10 @@ Trade Application contains two projects as below:
             "expired":true
          }
       ]
+      
+Note: Exception Scenario: **Dead Letter Queue**
+
+A **Dead Letter Queue (DLQ)** is a queue that holds undelivered/failed messages. A DLQ handles faulty or bad messages, monitor failure patterns and recover from exceptions in a system.
+
+Altogether, there are two main concepts: **Dead Letter Exchange (DLX)** and a **Dead Letter Queue (DLQ)** itself. In fact, DLX is a normal exchange that we can define as one of the common types: direct, topic or fanout.
+
