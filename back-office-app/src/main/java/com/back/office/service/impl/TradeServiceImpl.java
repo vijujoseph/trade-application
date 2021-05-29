@@ -31,7 +31,7 @@ public class TradeServiceImpl implements TradeService {
         trade.setCounterPartyId(tradeDto.getCounterPartyId());
         trade.setExpired(tradeDto.isExpired());
         trade.setVersion(tradeDto.getVersion());
-        int count = Integer.parseInt(tradeDto.getVersion())/0;
+        //int count = Integer.parseInt(tradeDto.getVersion())/0;
         trade.setMaturityDate(DateUtils.convertToTimeStamp(tradeDto.getMaturityDate()));
         trade.setCreatedDate(DateUtils.getCurrentTimeStampInUTC());
         System.out.println("Domain Trade saving : " + trade);
