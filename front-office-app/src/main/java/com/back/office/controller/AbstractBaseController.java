@@ -1,18 +1,19 @@
-package com.front.office.controller;
+package com.back.office.controller;
 
-import com.front.office.dto.BaseRequest;
-import com.front.office.dto.BaseResponse;
-import com.front.office.exception.ApplicationException;
+import com.back.office.exception.ApplicationException;
+import com.trade.domain.BaseResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
+
+import java.io.Serializable;
 
 /**
  * @author Viju Joseph (vijujoseph@gmail.com)
  */
 public abstract class AbstractBaseController {
 
-    protected <REQ extends BaseRequest> void validateRequest(REQ request, Errors errors) throws ApplicationException {
+    protected <REQ extends Serializable> void validateRequest(REQ request, Errors errors) throws ApplicationException {
         StringBuilder errorMessage = new StringBuilder("request is invalid. ");
         if (errors.hasErrors()) {
             if(errors.hasGlobalErrors()) {

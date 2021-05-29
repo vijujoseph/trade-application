@@ -1,4 +1,4 @@
-package com.front.office;
+package com.back.office;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

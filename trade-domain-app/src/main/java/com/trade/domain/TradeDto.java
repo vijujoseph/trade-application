@@ -1,8 +1,9 @@
-package com.front.office.dto;
+package com.trade.domain;
 
 /**
  * @author Viju Joseph (vijujoseph@gmail.com)
  */
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +20,7 @@ import javax.validation.constraints.Pattern;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Trade extends BaseRequest {
+public class TradeDto extends BaseRequest {
 
     @NotBlank(message = "tradeId is null or empty")
     private String tradeId;

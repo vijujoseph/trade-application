@@ -7,5 +7,5 @@ import com.trade.domain.TradeDto;
  */
 public interface TradeService {
 
-    boolean saveTradeOrder(TradeDto tradeDto);
+    boolean tradeOrder(TradeDto trade);
 }

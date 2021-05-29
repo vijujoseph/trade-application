@@ -1,10 +1,10 @@
 package com.back.office.service.impl;
 
-import com.back.office.dto.TradeDto;
 import com.back.office.entity.Trade;
-import com.back.office.repository.TradeRepository;
 import com.back.office.service.TradeService;
 import com.back.office.utils.DateUtils;
+import com.back.office.repository.TradeRepository;
+import com.trade.domain.TradeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +31,7 @@ public class TradeServiceImpl implements TradeService {
         trade.setCounterPartyId(tradeDto.getCounterPartyId());
         trade.setExpired(tradeDto.isExpired());
         trade.setVersion(tradeDto.getVersion());
+        int count = Integer.parseInt(tradeDto.getVersion())/0;
         trade.setMaturityDate(DateUtils.convertToTimeStamp(tradeDto.getMaturityDate()));
         trade.setCreatedDate(DateUtils.getCurrentTimeStampInUTC());
         System.out.println("Domain Trade saving : " + trade);

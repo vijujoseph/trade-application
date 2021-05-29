@@ -1,4 +1,4 @@
-package com.front.office.dto;
+package com.trade.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

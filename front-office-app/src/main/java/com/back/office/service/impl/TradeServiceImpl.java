@@ -1,8 +1,8 @@
-package com.front.office.service.impl;
+package com.back.office.service.impl;
 
-import com.front.office.dto.Trade;
-import com.front.office.service.PublisherService;
-import com.front.office.service.TradeService;
+import com.back.office.service.PublisherService;
+import com.back.office.service.TradeService;
+import com.trade.domain.TradeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class TradeServiceImpl implements TradeService {
     private PublisherService publisherService;
 
     @Override
-    public boolean tradeOrder(Trade trade) {
+    public boolean tradeOrder(TradeDto trade) {
         publisherService.publishMessage(trade);
         return true;
     }

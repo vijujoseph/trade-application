@@ -1,13 +1,13 @@
-package com.front.office.controller;
+package com.back.office.controller;
 
 /**
  * @author Viju Joseph (vijujoseph@gmail.com)
  */
 
-import com.front.office.dto.BaseResponse;
-import com.front.office.dto.Trade;
-import com.front.office.exception.ApplicationException;
-import com.front.office.service.TradeService;
+import com.back.office.exception.ApplicationException;
+import com.back.office.service.TradeService;
+import com.trade.domain.BaseResponse;
+import com.trade.domain.TradeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +27,7 @@ public class TradeController extends AbstractBaseController {
     private TradeService tradeService;
 
     @PostMapping("/order")
-    public ResponseEntity<?> bookOrder(@Valid @RequestBody Trade trade,  Errors errors) throws ApplicationException {
+    public ResponseEntity<?> bookOrder(@Valid @RequestBody TradeDto trade, Errors errors) throws ApplicationException {
 
         try {
             validateRequest(trade, errors);

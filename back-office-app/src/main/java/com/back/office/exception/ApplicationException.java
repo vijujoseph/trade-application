@@ -1,4 +1,4 @@
-package com.front.office.exception;
+package com.back.office.exception;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

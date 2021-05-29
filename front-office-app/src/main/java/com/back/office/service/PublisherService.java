@@ -5,7 +5,7 @@ import com.trade.domain.TradeDto;
 /**
  * @author Viju Joseph (vijujoseph@gmail.com)
  */
-public interface TradeService {
+public interface PublisherService {
 
-    boolean saveTradeOrder(TradeDto tradeDto);
+    boolean publishMessage(TradeDto trade);
 }
